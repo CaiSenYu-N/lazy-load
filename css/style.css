@@ -1,0 +1,15 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.container img {
+  float: left;
+  width: 50%;
+}
