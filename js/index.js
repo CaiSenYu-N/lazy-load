@@ -4,7 +4,7 @@ $(window).on('scroll', function(){
 })
 
 function start(){
-  $('.container img').each(function(){
+  $('.container img').not('[data-isLoaded]').each(function(){
     var $node = $(this)
     if( isShow($node) ){
       setTimeout(function(){
@@ -20,4 +20,5 @@ function isShow($node){
 
 function loadImg($img){
   $img.attr('src', $img.attr('data-src'))
+  $img.attr('data-isLoaded', 1)
 }
